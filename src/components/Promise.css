@@ -1,0 +1,253 @@
+/* Promise Section */
+.promise-section {
+  padding: 6rem 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.promise-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.promise-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Promise Grid */
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.promise-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid #dcfce7;
+}
+
+.promise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(22, 101, 52, 0.15);
+  border-color: #166534;
+}
+
+.promise-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.promise-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #166534;
+  margin-bottom: 0.75rem;
+}
+
+.promise-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Ecosystem Section */
+.ecosystem-section {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecosystem-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(22, 101, 52, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.ecosystem-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ecosystem-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.ecosystem-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ecosystem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border-left: 4px solid #166534;
+}
+
+.ecosystem-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.ecosystem-item p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ecosystem-visual {
+  display: flex;
+  align-items: center;
+}
+
+.visual-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.visual-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.visual-card p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.visual-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+/* CTA Banner */
+.promise-cta {
+  background: linear-gradient(135deg, #166534 0%, #14532d 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.promise-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.promise-cta h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.promise-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: #166534;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  background-color: #dcfce7;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .ecosystem-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .promise-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .promise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ecosystem-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .ecosystem-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .promise-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .promise-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .promise-cta p {
+    font-size: 1rem;
+  }
+}

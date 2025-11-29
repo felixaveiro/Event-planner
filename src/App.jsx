@@ -1,26 +1,24 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Events from './components/Events'
-import RegisterModal from './components/RegisterModal'
-import Footer from './components/Footer'
-import './style.css'
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Promise from './components/Promise';
+import Partners from './components/Partners';
+import Registration from './components/Registration';
+import Footer from './components/Footer';
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false)
-
-  const openModal = () => setModalOpen(true)
-  const closeModal = () => setModalOpen(false)
-
   return (
-    <>
-      <Header />
-      <Hero openModal={openModal} />
-      <Events openModal={openModal} />
-      <RegisterModal isOpen={modalOpen} closeModal={closeModal} />
+    <div className="App">
+      <Navbar />
+      <Hero />
+      <About />
+      <Promise />
+      <Partners />
+      <Registration />
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
