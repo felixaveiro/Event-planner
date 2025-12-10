@@ -1,11 +1,8 @@
-# Force Node 22+ or 25
-NIXPACKS_NODEJS_VERSION = "25"
-
-[phases.setup]
-nixpkgs = ["nodejs_22"]
+[variables]
+NIXPACKS_NODE_VERSION = "25"
 
 [phases.build]
 cmds = ["npm install", "npm run build"]
 
 [start]
-cmd = "npx serve -s dist -l 3000"
+cmd = "serve -s dist -l 3000"
