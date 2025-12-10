@@ -1,0 +1,11 @@
+[variables]
+NIXPACKS_NODE_VERSION = "25"
+
+[phases.build]
+cmds = ["npm install", "npm run build"]
+
+[phases.start]
+cmds = ["npm install -g serve", "serve -s dist -l 3000"]
+
+[start]
+cmd = "serve -s dist -l 3000"
