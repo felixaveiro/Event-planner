@@ -1,5 +1,5 @@
 # Force Node 22+ or 25
-NIXPACKS_NODE_VERSION = "25"
+NIXPACKS_NODEJS_VERSION = "25"
 
 [phases.setup]
 nixpkgs = ["nodejs_22"]
