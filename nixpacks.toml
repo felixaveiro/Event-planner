@@ -1,8 +1,20 @@
 [variables]
-NIXPACKS_NODE_VERSION = "25"
+# Correct variable name for Nixpacks
+NIXPACKS_NODEJS_VERSION = "25"
+
+[phases.setup]
+# Ensures node 25 is installed in the environment
+cmds = ["corepack enable"]
+
+[phases.install]
+cmds = [
+  "npm install"
+]
 
 [phases.build]
-cmds = ["npm install", "npm run build"]
+cmds = [
+  "npm run build"
+]
 
 [start]
-cmd = "serve -s dist -l 3000"
+cmd = "npx serve -s dist -l 3000"
